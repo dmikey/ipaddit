@@ -13,6 +13,9 @@ struct ContentView: View {
     var body: some View {
         WebView(url: url)
             .ignoresSafeArea()
+            .ignoresSafeArea(.keyboard)
+            .statusBar(hidden: true)
+            .persistentSystemOverlays(.hidden)
             .onContinueUserActivity("com.gitcodestudio.open-window") { activity in
                 if let webpage = activity.webpageURL {
                     self.url = webpage

@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct GitCodeStudioApp: App {
     var body: some Scene {
-        WindowGroup {
+        WindowGroup("ipaddit") {
             ContentView()
         }
     }
